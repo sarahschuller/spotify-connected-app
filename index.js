@@ -1,6 +1,10 @@
+require('dotenv').config();
+console.log(process.env.CLIENT_ID);
+
 const express = require('express');
 const app = express();
 const port = 8888;
+
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
