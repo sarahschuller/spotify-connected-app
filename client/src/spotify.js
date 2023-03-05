@@ -1,14 +1,6 @@
 import axios from "axios";
 
 
-/** 
- * Axios global request headers
- * https://github.com/axios/axios#global-axios-defaults
-*/
-axios.defaults.baseURL = 'https://api.spotify.com/v1';
-axios.defaults.headers['Authorization'] = `Bearer &{accessToken}`;
-axios.defaults.headers['Content-Type'] = 'application/json';
-
 // Map for LocalStorage keys
 const LOCALSTORAGE_KEYS = {
     accessToken: 'spotify_access_token',
@@ -128,3 +120,11 @@ const getAccessToken = () => {
   export const getCurrentUserProfile = () => axios.get('/me');
   
   export const accessToken = getAccessToken();
+
+  /** 
+ * Axios global request headers
+ * https://github.com/axios/axios#global-axios-defaults
+*/
+axios.defaults.baseURL = 'https://api.spotify.com/v1';
+axios.defaults.headers['Authorization'] = `Bearer ${accessToken}`;
+axios.defaults.headers['Content-Type'] = 'application/json';
