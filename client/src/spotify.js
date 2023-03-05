@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // Map for LocalStorage keys
 const LOCALSTORAGE_KEYS = {
     accessToken: 'spotify_access_token',
