@@ -119,5 +119,12 @@ const getAccessToken = () => {
     // We should never get here!
     return false;
   };
+
+  /**
+   * Get Current User's Profile
+   *  https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-current-users-profile
+   * @returns {Promise}
+   */
+  export const getCurrentUserProfile = () => axios.get('/me');
   
   export const accessToken = getAccessToken();
