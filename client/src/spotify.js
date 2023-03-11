@@ -121,6 +121,17 @@ const getAccessToken = () => {
   
   export const accessToken = getAccessToken();
 
+
+  /**
+   * Get a list of the Current User's Playlists
+   * https://developer.spotify.com/documentation/web-api/reference/#endpoint
+   * @returns {Promise}
+   */
+
+  export const getCurrentUserPlaylists = (limit = 20) => {
+    return axios.get(`/me/playlists?limit=${limit}`);
+  };
+
   /** 
  * Axios global request headers
  * https://github.com/axios/axios#global-axios-defaults
