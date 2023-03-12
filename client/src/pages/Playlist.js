@@ -20,7 +20,7 @@ const Playlist = () => {
     const fetchData = async () => {
       const { data } = await getPlaylistById(id);
       setPlaylist(data);
-      setTracksData(data.track);
+      setTracksData(data.tracks);
     };
 
     catchErrors(fetchData());
