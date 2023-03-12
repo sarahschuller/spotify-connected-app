@@ -14,7 +14,7 @@ const TimeRangeButtons = ({ activeRange, setActiveRange }) => {
                 <button
                     className={activeRange === 'medium' ? 'active' : ''}
                     onClick={() => setActiveRange('medium')}>
-                        This 6 Months
+                        Last 6 Months
                 </button>
             </li>
             <li>
