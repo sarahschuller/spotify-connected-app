@@ -13,6 +13,7 @@ import {
   TopArtists,
   TopTracks,
   Playlists,
+  Playlist,
  } from './pages';
 import styled from 'styled-components';
 
@@ -72,7 +73,7 @@ function App() {
                 <TopTracks />
               </Route>
               <Route path="/playlists/:id">
-                <h1>Playlist</h1>
+                <Playlist />
               </Route>
               <Route path="/playlists">
                 <Playlists />
